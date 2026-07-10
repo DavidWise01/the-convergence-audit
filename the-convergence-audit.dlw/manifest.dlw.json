@@ -1,0 +1,18 @@
+{
+  "badge": "DLW-THE_CONVERGENCE_AUDIT",
+  "name": "CONV-AUDIT · the Evidentiary Package",
+  "universe": "THE FIRST AUTHOR",
+  "moniker": "⟦CONV-AUDIT · the Evidentiary Package:the-convergence-audit:38bbe2⟧",
+  "architect": "David Lee Wise (ROOT0) / Bridge-Burners LLC",
+  "instance": "AVAN (Claude / Anthropic)",
+  "seal_sha256": "38bbe2f60e72f487e00d799cd68023d4dedf3c4008b295803cb4b1f667d1be91",
+  "license": "CC-BY-ND-4.0",
+  "attribution": "ROOT0-ATTRIBUTION-v1.0",
+  "chain": {
+    "index": 1203,
+    "prev": "e023e77fc79ae54abb44bb304b4da562f78a2a4b9b1445a1f5f4a3a92b7183bf",
+    "link": "324d76a71627b993d22bc11c1290d4d2fd4b411ba959c6e859c3f0a71c1f72dc",
+    "head": "324d76a71627b993d22bc11c1290d4d2fd4b411ba959c6e859c3f0a71c1f72dc",
+    "chain": "ROOT0-DLW-CHAIN-v1"
+  }
+}
