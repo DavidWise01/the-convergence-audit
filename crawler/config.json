@@ -1,0 +1,29 @@
+{
+  "schema": "root0.convergence-scout.config/1",
+  "allowed_hosts": [
+    "news.ycombinator.com",
+    "arxiv.org",
+    "github.com",
+    "huggingface.co"
+  ],
+  "seeds": [
+    "https://news.ycombinator.com/",
+    "https://arxiv.org/list/cs.AI/recent",
+    "https://github.com/topics/ai-agents",
+    "https://huggingface.co/blog"
+  ],
+  "patterns": [
+    "recursive self-improvement",
+    "source provenance",
+    "independent witnesses",
+    "expert routing",
+    "model collapse",
+    "self-improving agents",
+    "evidence carrying",
+    "intent drift",
+    "modeweaver"
+  ],
+  "max_pages": 20,
+  "max_depth": 1,
+  "host_delay_seconds": 2.5
+}
