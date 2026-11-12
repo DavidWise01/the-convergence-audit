@@ -1,0 +1,30 @@
+name: Convergence scout - public observations
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */12 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: convergence-scout
+  cancel-in-progress: false
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run unit tests
+        run: python -m unittest discover -s crawler -p 'test_*.py' -v
+      - name: Crawl only allowed pages
+        run: python crawler/crawl.py --max-pages 20
+      - name: Append new observations to Git
+        run: |
+          if [ ! -f crawler/observations.jsonl ]; then exit 0; fi
+          git add crawler/observations.jsonl
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name='ROOT0 Convergence Scout' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'observe: append unreviewed convergence candidates'
+          git push
